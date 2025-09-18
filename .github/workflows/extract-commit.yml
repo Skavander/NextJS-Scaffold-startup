@@ -1,0 +1,31 @@
+name: Extract and Commit
+on:
+  push:
+    branches: [main]  # Trigger on push to main branch
+
+jobs:
+  extract-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download the .tar file
+        run: |
+          wget https://github.com/Skavander/Codesecure/raw/main/path/to/archive.tar -O archive.tar
+
+      - name: Extract the .tar file
+        run: |
+          tar -xvf archive.tar
+
+      - name: Commit Extracted Files
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: .
+          commit_message: "Extracted .tar files"
+          author_name: GitHub Action
+          author_email: action@github.com
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+
