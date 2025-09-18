@@ -14,7 +14,7 @@ jobs:
 
       - name: Download the .tar file
         run: |
-          wget https://github.com/Skavander/Codesecure/raw/main/archive.tar -O archive.tar
+          wget https://github.com/Skavander/Codesecure/blob/2587d50d9397bc2206f316afea382fa7bfbad47a/archive.tar -O archive.tar
 
       - name: Extract the .tar file
         run: |
