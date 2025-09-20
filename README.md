@@ -72,7 +72,7 @@ npm start
 
 Open [http://localhost:3000](http://localhost:3000) to see your application running.
 
-## 🤖 Powered by Z.ai
+## 🤖 Powered by Skavander!
 
 This scaffold is optimized for use with your AI assistant for:
 
